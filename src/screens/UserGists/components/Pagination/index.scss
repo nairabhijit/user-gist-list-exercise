@@ -1,0 +1,12 @@
+.pagination-container {
+  button, button:disabled, button:hover {
+    background-color: transparent;
+    color: black !important;
+    border: 0px;
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+  button:hover {
+    border: 1px solid;
+  }
+}

@@ -1,10 +1,26 @@
-# Getting Started with Create React App
+## Functionalities
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+- User can find the public gists of a Github user
+- If the input Github username is invalid, it will throw an error
+- If the input Github user doesn't have gists, then it will show a 'No Gists...' component
+- At a time only 10 results can be seen on a page, the pagination functionality is being added
+- At a time only 3 forks are shown if any for a given gist, as is also stated in a requirement
+- The Gist URL is being displayed as a title in absence of a description
+- Example - Try with Github username 'tj' or 'ry' and you should be able to see the gists with pagination. Try with Github username 'nairabhijit' and you should see 'No Gists...'
+- Have created Personal Access Token in Github, so as to access the APIs, if not used, then we may face API rate limiting issues earlier than expected
+- .env file contains the environment variables
+- endpoint /users/{user_id} is used to validate the provided Github username,
+  endpoint /users/{gist_id}/gists is used to fetch the provided user gists, endpoint /gists/{gist_id}/forks is used to fetch the forks of a particular gist
+- The screens are completely responsive
+- Have tested with the latest versions of Chrome & Safari, but should work with other browsers too
 
-## Available Scripts
+## Improvements
 
-In the project directory, you can run:
+- Right now each gist fork is being fetched using an API, I suppose that Github does provide the GraphQL APIs as well, this may reduce the network request
+
+## Run Project
+
+In the current project directory, you can run:
 
 ### `npm start`
 
@@ -16,31 +32,19 @@ You will also see any lint errors in the console.
 
 ### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Launches the test runner in the interactive watch mode.
 
-### `npm run build`
+You can find the test cases in folder `screens>UserForm>__test__` & `screens>UserGists>__test__`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## This project uses the below technology stack
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- reactjs for the frontend development
+- typescript for type safety
+- bootstrap for CSS utilities & components
+- react-testing-library for testing
+- BEM(Block Element Modifier) naming convention has been followed for CSS
+- SCSS for variables and BEM shortcuts
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Author
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+Abhijit Nair - nairabhijit6@gmail.com

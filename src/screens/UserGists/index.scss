@@ -1,0 +1,16 @@
+.user-gists {
+  &--go-back-btn {
+    font-size: 14px;
+    &:hover, :focus {
+      background-color: transparent !important;
+      box-shadow: none;
+    }
+  }
+  &--list {
+    border: 1px solid #afb8c1;
+    border-radius: 10px;
+    .user-gist-details:first-child {
+      border-top-color: transparent;
+    }
+  }
+}

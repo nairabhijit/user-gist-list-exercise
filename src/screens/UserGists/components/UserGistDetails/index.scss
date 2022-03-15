@@ -1,0 +1,17 @@
+.user-gist-details {
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: #afb8c1;
+  padding: 10px;
+  a {
+    color: unset;
+    text-decoration: unset;
+  }
+  a:hover {
+    color: #0969da;
+  }
+  &--badge img {
+    border-radius: 10px;
+    height: 20px;
+  }
+}

@@ -1,0 +1,26 @@
+.fork {
+  border-bottom: 1px;
+  border-left: 1px;
+  border-bottom-style: dotted;
+  border-left-style: dotted;
+  margin-left: 10px;
+  &--details {
+    position: relative;
+    top: 0.5rem;
+    background: white;
+    margin-left: 20px;
+    padding-left: 0px;
+    padding-top: 10px;
+    &--avatar {
+      img {
+        height: 25px;
+        width: 25px;
+        border-radius: 12.5px;
+      }
+    }
+    &--days-ago {
+      color: #57606a;
+      font-size: 12px;
+    }
+  }
+}
